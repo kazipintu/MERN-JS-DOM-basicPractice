@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM (Document Object Model)</title>
+</head>
+
+<body>
+
+  <article>
+    <h3>My New Exceptional Blog-1</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nisi nobis atque corrupti pariatur, libero nostrum
+      doloribus aspernatur asperiores commodi consequuntur officiis. Aliquam, temporibus ab! Vel ratione rem aut
+      accusamus.</p>
+  </article>
+
+  <article>
+    <h3>My New Exceptional Blog-2</h3>
+    <p>Reiciendis incidunt voluptas est, unde itaque blanditiis sint magnam beatae ut rem sed. Accusamus neque,
+      aspernatur necessitatibus qui aliquid quibusdam hic, aperiam reprehenderit cupiditate ut, vero quas soluta officia
+      quidem.</p>
+  </article>
+
+  <article>
+    <h3>My New Exceptional Blog-3</h3>
+    <p>Aliquid sed fugit asperiores libero, eos obcaecati quae quam totam exercitationem! Dolor, perferendis odit
+      voluptatum fuga hic laudantium a sint beatae, unde delectus minus eos animi libero excepturi? Commodi, veniam!</p>
+  </article>
+
+  <script>
+    const blogTitles = document.getElementsByTagName('h3');
+    console.log(blogTitles);
+    for (const title of blogTitle) {
+      console.log(title);
+    }
+
+
+    const name = 'amar pakhi';
+    console.log(name)
+
+    console.log(document);
+    console.log(document.body); //document is "not" exactly/fully an object but a "model", so DOM (Document Object Model)
+
+    const myObject = {
+      naam: 'gupta naam',
+      age: 'jani na'
+    };
+    console.log(myObject.age); //object = {key:property}
+
+  </script>
+
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
