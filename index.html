@@ -24,7 +24,7 @@
       quidem.</p>
   </article>
 
-  <article>
+  <article id="article-third">
     <h3 id="id-test" class="test-class">My New Exceptional Blog-3</h3>
     <p class="common">Aliquid sed fugit asperiores libero, eos obcaecati quae quam totam exercitationem! Dolor,
       perferendis odit
@@ -33,8 +33,18 @@
 
   <script>
 
+    const li = document.createElement('li');
+    li.innerText = 'This list item has been created';
+    console.log(li);
+
+    const articleThird = document.getElementById('article-third');
+    console.log(articleThird);
+    articleThird.appendChild(li);
+
     const idTest = document.getElementById('id-test');
     console.log(idTest);
+    idTest.style.backgroundColor = 'lightGreen';
+    idTest.style.padding = '30px';
 
     const testClass = document.getElementsByClassName('test-class')
     console.log(testClass);
