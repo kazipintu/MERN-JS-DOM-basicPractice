@@ -10,32 +10,57 @@
 <body>
 
   <article>
-    <h3>My New Exceptional Blog-1</h3>
+    <h3 class="common">My New Exceptional Blog-1</h3>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nisi nobis atque corrupti pariatur, libero nostrum
       doloribus aspernatur asperiores commodi consequuntur officiis. Aliquam, temporibus ab! Vel ratione rem aut
       accusamus.</p>
   </article>
 
   <article>
-    <h3>My New Exceptional Blog-2</h3>
-    <p>Reiciendis incidunt voluptas est, unde itaque blanditiis sint magnam beatae ut rem sed. Accusamus neque,
+    <h3 id="second-heading">My New Exceptional Blog-2</h3>
+    <p class="common">Reiciendis incidunt voluptas est, unde itaque blanditiis sint magnam beatae ut rem sed. Accusamus neque,
       aspernatur necessitatibus qui aliquid quibusdam hic, aperiam reprehenderit cupiditate ut, vero quas soluta officia
       quidem.</p>
   </article>
 
   <article>
     <h3>My New Exceptional Blog-3</h3>
-    <p>Aliquid sed fugit asperiores libero, eos obcaecati quae quam totam exercitationem! Dolor, perferendis odit
+    <p class="common">Aliquid sed fugit asperiores libero, eos obcaecati quae quam totam exercitationem! Dolor, perferendis odit
       voluptatum fuga hic laudantium a sint beatae, unde delectus minus eos animi libero excepturi? Commodi, veniam!</p>
   </article>
 
   <script>
-    const blogTitles = document.getElementsByTagName('h3');
-    console.log(blogTitles);
-    for (const title of blogTitle) {
-      console.log(title);
+
+    const commonClass = document.getElementsByClassName ('common');
+    console.log(commonClass);
+    for (const singleClass of commonClass) {
+      console.log(singleClass);
+      singleClass.style.backgroundColor = 'red';
+      singleClass.style.color = 'white';
+      singleClass.style.margin = '30px';
+      singleClass.style.padding = '30px';
     }
 
+    const secondHeading = document.getElementById('second-heading')
+    console.log(secondHeading);
+    secondHeading.style.backgroundColor = 'Blue';
+    secondHeading.style.color = 'white';
+    secondHeading.style.padding = '30px';
+
+    const blogTitles = document.getElementsByTagName('h3');
+    console.log(blogTitles);
+    for (const title of blogTitles) {
+      console.log(title.innerText = 'My New Exceptional Blog-3 (this text can be changed with javascript by user)');
+    }
+
+    const detailPara = document.getElementsByTagName('p');
+    console.log(detailPara);
+    for (const detail of detailPara) {
+      console.log(detail);
+      detail.style.backgroundColor = 'yellow'
+      detail.style.color = 'red'
+      detail.style.padding = '40px'
+    }
 
     const name = 'amar pakhi';
     console.log(name)
