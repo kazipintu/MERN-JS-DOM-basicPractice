@@ -33,14 +33,6 @@
 
   <script>
 
-    const li = document.createElement('li');
-    li.innerText = 'This list item has been created';
-    console.log(li);
-
-    const articleThird = document.getElementById('article-third');
-    console.log(articleThird);
-    articleThird.appendChild(li);
-
     const idTest = document.getElementById('id-test');
     console.log(idTest);
     idTest.style.backgroundColor = 'lightGreen';
@@ -94,6 +86,46 @@
       age: 'jani na'
     };
     console.log(myObject.age); //object = {key:property}
+
+
+    //create new child element under existing parent element 
+    const li = document.createElement('li');
+    li.innerText = 'This list item has been created';
+    console.log(li);
+
+    const articleThird = document.getElementById('article-third');
+    console.log(articleThird);
+    articleThird.appendChild(li);
+
+
+    //create a new section/article with several parent -child system and innertext 
+    const article = document.createElement('article');
+    console.log(article);
+
+    const h3 = document.createElement('h3');
+    console.log(h3);
+    h3.innerText = 'New blog-4';
+
+    const p = document.createElement('p');
+    console.log(p);
+    p.innerText = 'Aliquid sed fugit asperiores libero, eos obcaecati quae quam totam exercitationem! Dolor, perferendis odit voluptatum fuga hic laudantium a sint beatae, unde delectus minus eos animi libero excepturi? Commodi, veniam!'
+
+    article.appendChild(h3);
+    article.appendChild(p);
+    console.log(article);
+
+    document.body.appendChild(article);
+
+
+    const articlesBorder = document.getElementsByTagName('article')
+    console.log(articlesBorder);
+    for (const articleBorder of articlesBorder) {
+      articleBorder.style.border = '2px solid purple';
+      articleBorder.style.borderRadius = '10px';
+      articleBorder.style.margin = '20px';
+      articleBorder.style.padding = '20px';
+    }
+
 
   </script>
 
