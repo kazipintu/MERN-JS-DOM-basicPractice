@@ -18,20 +18,31 @@
 
   <article>
     <h3 id="second-heading">My New Exceptional Blog-2</h3>
-    <p class="common">Reiciendis incidunt voluptas est, unde itaque blanditiis sint magnam beatae ut rem sed. Accusamus neque,
+    <p class="common">Reiciendis incidunt voluptas est, unde itaque blanditiis sint magnam beatae ut rem sed. Accusamus
+      neque,
       aspernatur necessitatibus qui aliquid quibusdam hic, aperiam reprehenderit cupiditate ut, vero quas soluta officia
       quidem.</p>
   </article>
 
   <article>
-    <h3>My New Exceptional Blog-3</h3>
-    <p class="common">Aliquid sed fugit asperiores libero, eos obcaecati quae quam totam exercitationem! Dolor, perferendis odit
+    <h3 id="id-test" class="test-class">My New Exceptional Blog-3</h3>
+    <p class="common">Aliquid sed fugit asperiores libero, eos obcaecati quae quam totam exercitationem! Dolor,
+      perferendis odit
       voluptatum fuga hic laudantium a sint beatae, unde delectus minus eos animi libero excepturi? Commodi, veniam!</p>
   </article>
 
   <script>
 
-    const commonClass = document.getElementsByClassName ('common');
+    const idTest = document.getElementById('id-test');
+    console.log(idTest);
+
+    const testClass = document.getElementsByClassName('test-class')
+    console.log(testClass);
+    for (const h3TestClass of testClass) {
+      h3TestClass.style.color = 'blue'
+    }
+
+    const commonClass = document.getElementsByClassName('common');
     console.log(commonClass);
     for (const singleClass of commonClass) {
       console.log(singleClass);
